@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>G-WEB</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="G1.css">
+  <link rel="shortcut icon" href="images/logo G.jpg" /> 
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: navy;
+  color: #ddd;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+.header a {
+  color: #ddd;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+input[type=text] {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 25%;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.card a{
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  color: #125688;
+}
+
+.write-post-container{
+    width: 100%;
+    background: var(--bg-color);
+    border-radius: 6px;
+    padding: 20px;
+    color: #626262;
+}
+.user-profile{
+    display: flex;
+    align-items: center;
+}
+.user-profile img{
+    width: 45px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.user-profile p{
+    margin-bottom: 0px;
+    font-weight: 500;
+    color: #626262;
+}
+.user-profile small{
+    font-size: 12px;
+}
+
+.post-input-container{
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.post-input-container textarea{
+    width: 100%;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid #ccc;
+    background: transparent;
+    resize: none;
+}
+.add-post-link{
+    display: flex;
+    margin-top: 10px;
+}
+.add-post-link a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #626262;
+    margin-right: 20px;
+    font-size: 13px;
+}
+.add-post-link a img{
+    width: 20px;
+    margin-right: 10px;
+}
+
+.input-2[type=text] {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 20px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+.input-2[type=text]:focus {
+  width: 100%;
+}
+
+.button {
+  width: 100px;
+  background-color: #125688;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 25%;
+  cursor: pointer;
+  transition: background 0.4s;
+}
+
+.button:hover{
+  background: #062338;
+}
+
+/* Style all font awesome icons */
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #125688;
+  color: white;
+}
+
+.next {
+  background-color: black;
+  color: white;
+}
+
+.round {
+  border-radius: 50%;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #333;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+
+
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <a href="#"><h1>G-WEB</span></h1>
+  <p>Welcome to G-WEB</p></a>
+</div>
+
+<div class="topnav">
+  <a href="index.html">Apk Download</a>
+  <a href="community.html">Community</a>
+  <a href="https://www.droidgamers.com/">Article</a>
+  <a href="marketplace.html">Marketplace</a>
+  <form>
+    <input type="text" name="search" placeholder="Search.."style="float:right">
+  </form>
+  </div>
+
+  
+</div>
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <div class="write-post-container">
+        <div class="user-profile">
+            <img src="images/anonymous.jfif">
+            <div>
+                <p>anonim</p>
+                <small>Public <i class="fa-solid fa-caret-down"></i></small>
+            </div>
+        </div>
+
+        <div class="post-input-container">
+            <textarea rows="3" placeholder="What's on your mind? "></textarea>
+            <div class="add-post-link">
+                <a href="#"><img src="images/live-video.png"> Live Video</a>
+                <a href="#"><img src="images/photo.png"> Photo/Video</a>
+                <a href="#"><img src="images/feeling.png"> Felling/Activity</a>
+                <script src="https://kit.fontawesome.com/67c3eba74c.js" crossorigin="anonymous"></script>
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+    
+  </div>
+
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About This Site</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <div style="height:100px;"></div>
+    </div>
+    <div class="card">
+      <h3>Subscribe via Email</h3>
+      <p>Enter your email address, Receive notifications of new Top Games:
+      </p>
+      <input type="text" class="input-2"><br> 
+      <input type="button" class="button" value="Subscribe">
+    </div>
+    
+    <div class="card">
+      <h3>Follow Me</h3>
+      <!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- Add font awesome icons -->
+<a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-youtube"></a>
+<a href="#" class="fa fa-instagram"></a>
+...
+      <p></p>
+    </div>
+
+    <div class="card">
+      <h3>Doesn't have account?</h3>
+      <p>Create here for join with our community</p>
+      <a href="#">Create account</a>
+    </div>
+  </div>
+</div>
+
+
+
+<a href="#" class="previous round">&#8249;</a>
+<a href="#" class="next round">&#8250;</a>
+
+<div class="footer">
+  <p><span style="color: #ddd">copyright &copy G-WEB 2022 </span></p>
+</div>
+
+
+</body>
+</html>
